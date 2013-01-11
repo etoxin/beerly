@@ -1,0 +1,35 @@
+{
+  "name": "beerly",
+  "description": "A Sydney based vraft beer locator.",
+  "version": "0.0.1",
+  "homepage": "http://beerly.com.au",
+  "author": {
+    "name": "Adam Lusted",
+    "email": "adam@etoxin.net",
+    "url": "http://www.etoxin.net/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/etoxin/beerly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/etoxin/beerly/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://beerly.com.au/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/beerly",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.17"
+  },
+  "keywords": []
+}
