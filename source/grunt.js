@@ -12,48 +12,40 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: ['<banner:meta.banner>', '<file_strip_banner:lib/<%= pkg.name %>.js>'],
-        dest: 'dist/<%= pkg.name %>.js'
+        src: ['www/includes/js/jquery-1.8.3.min.js','www/includes/js/application.js'],
+        dest: 'www/includes/js/<%= pkg.name %>.js'
       }
     },
     min: {
       dist: {
         src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
-        dest: 'dist/<%= pkg.name %>.min.js'
+        dest: 'www/includes/js/<%= pkg.name %>.min.js'
       }
     },
-    test: {
-      files: ['test/**/*.js']
-    },
-    lint: {
-      files: ['grunt.js', 'lib/**/*.js', 'test/**/*.js']
-    },
-    watch: {
-      files: '<config:lint.files>',
-      tasks: 'lint test'
-    },
-    jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        boss: true,
-        eqnull: true
+    less: { 
+      development: {
+        options: {
+          yuicompress: false
+        },
+        files: {
+          "www/includes/css/<%= pkg.name %>.css": "www/includes/css/*.less"
+        }
       },
-      globals: {
-        exports: true,
-        module: false
+      production: {
+        options: {
+          yuicompress: true
+        },
+        files: {
+          "www/includes/css/<%= pkg.name %>.min.css": "www/includes/css/*.less"
+        }
       }
-    },
-    uglify: {}
+    }
   });
 
+  // load modules 
+  grunt.loadNpmTasks('grunt-contrib-less');
+
   // Default task.
-  grunt.registerTask('default', 'lint test concat min');
+  grunt.registerTask('default', 'concat min less');
 
 };
