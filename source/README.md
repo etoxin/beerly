@@ -2,42 +2,6 @@
 
 A Sydney based vraft beer locator.
 
-## Getting Started
-### On the server
-Install the module with: `npm install beerly`
-
-```javascript
-var beerly = require('beerly');
-beerly.awesome(); // "awesome"
-```
-
-### In the browser
-Download the [production version][min] or the [development version][max].
-
-[min]: https://raw.github.com/etoxin/beerly/master/dist/beerly.min.js
-[max]: https://raw.github.com/etoxin/beerly/master/dist/beerly.js
-
-In your web page:
-
-```html
-<script src="dist/beerly.min.js"></script>
-<script>
-awesome(); // "awesome"
-</script>
-```
-
-In your code, you can attach beerly's methods to any object.
-
-```html
-<script>
-this.exports = Bocoup.utils;
-</script>
-<script src="dist/beerly.min.js"></script>
-<script>
-Bocoup.utils.awesome(); // "awesome"
-</script>
-```
-
 ## Documentation
 _(Coming soon)_
 
