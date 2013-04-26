@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: ['www/includes/js/jquery-1.8.3.min.js','www/includes/js/application.js'],
+        src: ['www/includes/js/application.js'],
         dest: 'www/includes/js/<%= pkg.name %>.js'
       }
     },

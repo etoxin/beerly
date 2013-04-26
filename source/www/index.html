@@ -9,13 +9,16 @@
 	<script src="includes/js/modernizr.js"></script>
 	<script>
 		Modernizr.load([
+			{load: 'includes/css/yui-reset.css'},
 			{load: 'includes/css/beerly.css'},
-			{load: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js'},
-			{load: 'includes/js/beerly.min.js'}
 		]);
 	</script>
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js'></script>
+	<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Z28YaJAWjWrx-TAknMNOVST5JUfMoC4&sensor=true'></script>
+	<script src='includes/js/beerly.js'></script>
 </head>
 <body>
 	<h1>Beerly</h1>
+	<div id="map-canvas"></div>
 </body>
 </html>

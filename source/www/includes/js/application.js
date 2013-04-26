@@ -1,6 +1,2 @@
 /* Beerly */
-var beerly = {
-	init: function () {
-		// init
-	}
-};
+window.Beerly = window.Beerly || {};
