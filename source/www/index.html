@@ -1,9 +1,19 @@
-<html>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 	<title>Beerly</title>
-	<link rel="stylesheet" type="text/css" href="includes/css/beerly.css">
-	<script type="text/javascript" src="includes/js/beerly.js"></script>
-	<!-- <script type="text/javascript" src="includes/js/beerly.min.js"></script> -->
+	<script src="includes/js/modernizr.js"></script>
+	<script>
+		Modernizr.load([
+			{load: 'includes/css/beerly.css'},
+			{load: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js'},
+			{load: 'includes/js/beerly.min.js'}
+		]);
+	</script>
 </head>
 <body>
 	<h1>Beerly</h1>
